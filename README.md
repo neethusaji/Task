@@ -48,16 +48,22 @@ DATABASES = {
 Save the file and ensure PostgreSQL is running.
 
 2. Run Migrations
+   
 Generate and apply migrations to set up the database schema:
 
 python manage.py makemigrations
 python manage.py migrate
+
 3. Start the Development Server
+
 Run the server locally:
 
 
 python manage.py runserver
+
 4. Access the Application
+
 Open your browser and navigate to:
+
 http://127.0.0.1:8000/upload-csv/
 
