@@ -1,0 +1,50 @@
+<!-- templates/user_api/upload_csv.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .error {
+            color: red;
+            margin-bottom: 10px;
+        }
+        .success {
+            color: green;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload CSV File</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+
+    <hr>
+
+    <h2>Summary</h2>
+    {% if valid_records or invalid_records %}
+        <p class="success">Valid Records: {{ valid_records }}</p>
+        <p class="error">Invalid Records: {{ invalid_records }}</p>
+    {% endif %}
+
+    <h2>Errors</h2>
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+                <li class="error">{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No errors found.</p>
+    {% endif %}
+</body>
+</html>
