@@ -5,9 +5,13 @@ This is a Django-based project that enables users to upload CSV files containing
 Technologies Used
 
 Frameworks: Django, Django REST Framework
-Frontend: HTML
+
+Frontend: 
+
 Database: PostgreSQL
+
 File Handling: Python CSV module
+
 Validation: Django REST Framework serializers
 
 Install the required Python packages:
