@@ -18,10 +18,12 @@ Install the required Python packages:
 
 pip install django djangorestframework psycopg2
 1. Configure the Database
+2. 
 Open the settings.py file located in the project/settings.py folder.
+
 Update the database settings for PostgreSQL as shown below:
-python
-Copy code
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -32,7 +34,9 @@ DATABASES = {
         'PORT': '5432',       # Default PostgreSQL port
     }
 }
+
 Save the file and ensure PostgreSQL is running.
+
 2. Run Migrations
 Generate and apply migrations to set up the database schema:
 
