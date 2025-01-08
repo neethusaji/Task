@@ -1,7 +1,9 @@
 CSV Upload and User Management API
+
 This is a Django-based project that enables users to upload CSV files containing user information. The application validates the data and saves it to the database. Invalid rows are flagged with detailed errors, and duplicate email addresses are skipped gracefully.
 
 Technologies Used
+
 Frameworks: Django, Django REST Framework
 Frontend: HTML
 Database: PostgreSQL
